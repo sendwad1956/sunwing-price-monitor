@@ -24,8 +24,8 @@ jobs:
       - name: Run script
         run: python sunwing_price_monitor.py --config config.json --output output
 
-      - name: Upload output as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: sunwing-results
-          path: output
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./output
