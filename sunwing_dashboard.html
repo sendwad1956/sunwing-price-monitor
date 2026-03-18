@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sunwing Mexico Price Monitor</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: Segoe UI, Arial, sans-serif;
+    margin: 0;
+    background: #0f172a;
+    color: #e5e7eb;
+}
+.wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+h1 {
+    margin: 0 0 6px 0;
+    font-size: 28px;
+}
+.sub {
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+.hero {
+    background: linear-gradient(135deg, #1d4ed8, #0f766e);
+    padding: 18px 20px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+.hero-label {
+    font-size: 13px;
+    opacity: 0.9;
+}
+.hero-main {
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 4px;
+}
+.hero-sub {
+    margin-top: 6px;
+    color: #dbeafe;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+}
+.card {
+    background: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+}
+.dest {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+.price {
+    font-size: 30px;
+    font-weight: 800;
+}
+.price span {
+    font-size: 14px;
+    color: #93c5fd;
+    margin-left: 6px;
+}
+.total, .meta, .trend {
+    margin-top: 8px;
+    color: #cbd5e1;
+}
+.section-title {
+    margin: 30px 0 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #111827;
+    border-radius: 14px;
+    overflow: hidden;
+}
+th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid #1f2937;
+    font-size: 14px;
+}
+th {
+    background: #0b1220;
+    color: #93c5fd;
+}
+.note {
+    margin-top: 20px;
+    color: #94a3b8;
+    font-size: 13px;
+}
+code {
+    color: #fde68a;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Sunwing Mexico Price Monitor</h1>
+  <div class="sub">Origin: Calgary | Travelers: 2 | Date filter: 2026-11-01 to 2027-04-30</div>
+  
+  <div class="grid">
+    <div class="card">No prices found on this run.</div>
+  </div>
+
+  <div class="section-title">Recent checks</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Checked</th>
+        <th>Destination</th>
+        <th>Resort</th>
+        <th>Travel date</th>
+        <th>Price / adult</th>
+        <th>Total for party</th>
+        <th>Source</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td colspan="7">No history yet.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    This tool monitors published prices and trends from Sunwing pages. Final price and availability are confirmed only at checkout.
+    If Sunwing changes the HTML structure, the parser in <code>sunwing_price_monitor.py</code> may need a quick selector update.
+  </div>
+</div>
+</body>
+</html>
