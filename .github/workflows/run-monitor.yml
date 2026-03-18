@@ -1,0 +1,31 @@
+name: Run Sunwing Monitor
+
+on:
+  schedule:
+    - cron: '0 15 * * *'   # Runs daily at 8 AM BC time (15:00 UTC)
+  workflow_dispatch:       # Allows manual run
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Run script
+        run: python sunwing_price_monitor.py --config config.json --output output
+
+      - name: Upload output as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sunwing-results
+          path: output
