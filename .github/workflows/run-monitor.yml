@@ -2,8 +2,8 @@ name: Run Sunwing Monitor
 
 on:
   schedule:
-    - cron: '0 15 * * *'   # Runs daily at 8 AM BC time (15:00 UTC)
-  workflow_dispatch:       # Allows manual run
+    - cron: '0 15 * * *'   # Daily 8 AM BC time
+  workflow_dispatch:
 
 jobs:
   run-script:
@@ -23,8 +23,19 @@ jobs:
 
       - name: Run script
         run: python sunwing_price_monitor.py --config config.json --output output
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./output
+          path: ./output
+
+  deploy:
+    needs: run-script
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
