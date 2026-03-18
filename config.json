@@ -1,0 +1,42 @@
+{
+  "origin_city": "Calgary",
+  "travelers": 2,
+  "currency": "CAD",
+  "date_filters": {
+    "start_date": "2026-11-01",
+    "end_date": "2027-04-30"
+  },
+  "destinations": [
+    {
+      "name": "Cancun",
+      "url": "https://www.sunwing.ca/en/destinations/mexico/cancun"
+    },
+    {
+      "name": "Riviera Maya",
+      "url": "https://www.sunwing.ca/en/destinations/mexico/riviera-maya"
+    },
+    {
+      "name": "Puerto Vallarta",
+      "url": "https://www.sunwing.ca/en/destinations/mexico/puerto-vallarta"
+    },
+    {
+      "name": "Los Cabos",
+      "url": "https://www.sunwing.ca/en/destinations/mexico/los-cabos"
+    },
+    {
+      "name": "Riviera Nayarit",
+      "url": "https://www.sunwing.ca/en/destinations/mexico/riviera-nayarit"
+    }
+  ],
+  "extra_pages": [
+    {
+      "name": "Lowest Prices of the Year",
+      "url": "https://www.sunwing.ca/en/promotion/packages/lowest-prices-of-the-year"
+    },
+    {
+      "name": "Lowest Price Calendar",
+      "url": "https://www.sunwing.ca/en/lowest-price-calendar"
+    }
+  ],
+  "alert_threshold_per_adult": 1600
+}
